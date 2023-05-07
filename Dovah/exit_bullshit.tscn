@@ -1,0 +1,62 @@
+[gd_scene load_steps=2 format=3 uid="uid://n6htpw6folab"]
+
+[ext_resource type="Script" path="res://exit_bullshit.gd" id="1_mb15b"]
+
+[node name="EXIT_BULLSHIT" type="CanvasLayer"]
+script = ExtResource("1_mb15b")
+
+[node name="BG" type="ColorRect" parent="."]
+offset_right = 1150.0
+offset_bottom = 647.0
+color = Color(1, 1, 1, 0.254902)
+
+[node name="PauseMenu" type="Control" parent="BG"]
+process_mode = 3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="CenterContainer" type="CenterContainer" parent="BG/PauseMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_right = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="BG/PauseMenu/CenterContainer"]
+custom_minimum_size = Vector2(400, 180)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="BG/PauseMenu/CenterContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BG/PauseMenu/CenterContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="BG/PauseMenu/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Exit"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="BG/PauseMenu/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MAIN_MENU" type="Button" parent="BG/PauseMenu/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "To  Menu"
+
+[node name="DESKTOP" type="Button" parent="BG/PauseMenu/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "To  Desktop"
+
+[connection signal="pressed" from="BG/PauseMenu/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/DESKTOP" to="." method="_on_desktop_pressed"]

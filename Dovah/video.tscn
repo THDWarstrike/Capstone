@@ -1,0 +1,60 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbwmkc2c82mpt"]
+
+[ext_resource type="Script" path="res://video.gd" id="1_n6gsw"]
+
+[node name="Video" type="Node2D"]
+script = ExtResource("1_n6gsw")
+
+[node name="BG" type="ColorRect" parent="."]
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 1156.0
+offset_bottom = 648.0
+color = Color(0, 0.541176, 0.619608, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 370.0
+offset_top = 11.0
+offset_right = 766.0
+offset_bottom = 37.0
+text = "Video"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Button" parent="."]
+offset_left = 564.0
+offset_top = 492.0
+offset_right = 609.0
+offset_bottom = 523.0
+text = "BACK"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="DM" type="Label" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+text = "DISPLAY MODE"
+
+[node name="VSYNC" type="Label" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+text = "VSYNC"
+
+[node name="DISPLAYFPS" type="Label" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+text = "DISPLAY FPS"
+
+[node name="MAX FPS" type="Label" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+text = "MAX FPS"
+
+[node name="BM" type="Label" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+text = "BLOOM"
+
+[node name="BRIGHTNESS" type="Label" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+text = "BRIGHTNESS"
